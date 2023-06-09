@@ -395,3 +395,16 @@ strong {
   color: grey;
 
 }
+
+#precio_dolar{
+  width: 20%;
+  height: 100%;
+  margin: auto;
+  background-color: rgba(22, 69, 240, 0.404);
+  border: none;
+  padding: 0.5rem 0;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+

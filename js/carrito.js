@@ -81,7 +81,7 @@ export function eliminarDelCarrito(e) {
           color: "rgba(255,255,255,.9)",
         }).then((res) => {
           if (res.isConfirmed === true) {
-            e.target.parentElement.classList.add("animate__flipOutY");
+            e.target.parentElement.classList.add("animate__bounceOutLeft");
             db.splice(index, 1);
             localStorage.setItem("carrito", JSON.stringify(db));
             setTimeout(() => {

@@ -8,3 +8,23 @@ export class ProductoCarrito {
       (this.foto = foto);
   }
 }
+
+
+//API
+
+obtenerDolar();
+
+function obtenerDolar() {
+  const URLDOLAR = 'https://api.bluelytics.com.ar/v2/latest';
+  fetch(URLDOLAR)
+    .then((respuesta) => respuesta.json())
+    .then((datos) => {
+      const dolarBlue = datos.blue;
+      console.log(dolarBlue);
+      document.getElementById('precio_dolar').innerHTML += `
+      <p>Dolar compra: $ ${dolarBlue.value_buy} - Dolar venta : $ ${dolarBlue.value_sell}</p>
+      `;
+
+    })
+
+}
